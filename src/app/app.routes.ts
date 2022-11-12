@@ -4,6 +4,7 @@ import { InboxComponent } from './inbox/inbox.component';
 export const Routes: Route[] = [
   {
     path: 'inbox',
-    component: InboxComponent,
+    loadChildren: () =>
+      import('./inbox/inbox.routes').then((mod) => mod.Routes),
   },
 ];
