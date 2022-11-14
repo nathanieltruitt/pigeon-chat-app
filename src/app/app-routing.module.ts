@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'inbox',
-    loadChildren: () =>
-      import('./inbox/inbox.routes').then((mod) => mod.Routes),
+    path: '',
+    redirectTo: '/inbox',
+    pathMatch: 'full',
   },
 ];
 

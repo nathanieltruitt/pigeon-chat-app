@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InboxComponent } from './inbox.component';
+import { MessageThreadComponent } from './message/message-thread.component';
+import { InboxRoutingModule, RoutingComponents } from './inbox-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [InboxComponent],
-  imports: [CommonModule],
+  declarations: [MessageThreadComponent, RoutingComponents],
+  imports: [CommonModule, InboxRoutingModule, SharedModule],
 })
 export class InboxModule {}
