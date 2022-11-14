@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,6 +8,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './message.component.html',
 })
 export class MessageComponent implements OnInit {
+  @Input() profileImg!: string;
+  @Input() name!: string;
+  @Input() currentMsg!: string;
   constructor() {}
 
   ngOnInit(): void {}
